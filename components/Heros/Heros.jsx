@@ -32,8 +32,8 @@ const Heros = () => {
           <div key={image.id} className={styles.bg}>
             <Image
               src={image.Image}
-              width={isDesktop ? 60 : 50}
-              height={isDesktop ? 60 : 50}
+              width={isDesktop ? 100 : 70}
+              height={isDesktop ? 100 : 70}
               alt="images"
             />
           </div>

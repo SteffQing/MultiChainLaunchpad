@@ -1,24 +1,25 @@
-.container{
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: -3rem;
+  padding-bottom: 4rem;
+  position: relative;
+  z-index: 5;
+  .Card {
+    background: rgba(66, 117, 224, 0.45);
+    border-radius: 6px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.9px);
+    -webkit-backdrop-filter: blur(7.9px);
     display: flex;
-    flex-direction: column;
+    padding: 1rem 2rem;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
-    .Card{
-
-        background: rgba(66, 117, 224, 0.45);
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(7.9px);
-        -webkit-backdrop-filter: blur(7.9px);
-
-        display: flex;
-        border-radius: 1.5rem;
-        padding: 1rem 2rem;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        font-weight: 500;
-        color: black;
-    }
+    gap: 1rem;
+    font-weight: 500;
+    color: black;
+  }
 }
