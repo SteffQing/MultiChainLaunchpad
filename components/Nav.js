@@ -47,7 +47,12 @@ export default function Navbar({
             <a className={styles.innerLogo}>
               {isDesktop ? (
                 <>
-                  <Image src="/logo.jpg" height="45px" width="45px" />
+                  <Image
+                    src="/logo.jpg"
+                    height="45px"
+                    width="45px"
+                    alt="logo"
+                  />
                   <span>TexoStarter</span>
                   {isDesktop && (
                     <motion.div
@@ -61,7 +66,12 @@ export default function Navbar({
                 </>
               ) : (
                 <>
-                  <Image src="/logo.jpg" height="45px" width="45px" />
+                  <Image
+                    src="/logo.jpg"
+                    height="45px"
+                    width="45px"
+                    alt="logo"
+                  />
                   <span>TexoStarter</span>
                 </>
               )}
