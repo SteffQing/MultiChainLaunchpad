@@ -48,7 +48,7 @@ export default function Navbar({
             <a className={styles.innerLogo}>
               {isDesktop ? (
                 <>
-                  <span>AS</span>
+                  <span>TexoStater</span>
                   {isDesktop && (
                     <motion.div
                       className={styles.hamburger}
@@ -70,13 +70,12 @@ export default function Navbar({
                 </>
               ) : (
                 <>
-                  <span>AS</span>
-
                   {openMM ? (
                     <CgClose />
                   ) : (
                     <GiHamburgerMenu onClick={handleMobileClick} />
                   )}
+                  <span>TexoStater</span>
                 </>
               )}
             </a>
