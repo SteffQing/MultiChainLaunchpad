@@ -252,4 +252,25 @@
 }
 .container .informationSection .poolInformation .infoList div span {
   text-align: right;
+}
+
+.errorModalContainer {
+  width: 100%;
+  position: fixed;
+  bottom: 6%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.errorModalContainer .errorModal {
+  border-radius: 7px;
+  background-color: #292727;
+  color: #e6e6e6;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
 }/*# sourceMappingURL=Launchpadportal.module.css.map */

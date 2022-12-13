@@ -10,9 +10,9 @@ export default async function handler(req, res) {
     image: "/logo.jpg",
     IDOdate: 1670903400,
     accessType: "Public",
-    salePrice: 0.1,
+    salePrice: 1,
     distributionDate: 1670989800,
-    targetSale: 5000,
+    targetSale: 50000,
   };
   res.status(200).json(data);
 }
