@@ -5,27 +5,17 @@ import { useEffect, useRef, useState } from "react";
 import { HiOutlineHome } from "react-icons/hi"; //Home
 import { GiMissileLauncher } from "react-icons/gi"; //launchpad
 import { RiExchangeFundsFill } from "react-icons/ri"; //stake
-import { AiOutlineFundProjectionScreen } from "react-icons/ai"; //index fund
-import { BiCoinStack } from "react-icons/bi"; //liquidity
 
 export default function MobileMenu({ handleMobileClick, openMM }) {
   //states
   const [LaunchPadMenu, setLaunchPadMenu] = useState(false);
-  const [liquidityMenu, setLiquidityMenu] = useState(false);
   const [stakingMenu, setStakingMenu] = useState(false);
-  const [IndexFundMenu, setIndexFundMenu] = useState(false);
   //states handlers
-  const HandleLiquidityMenu = () => {
-    setLiquidityMenu(!liquidityMenu);
-  };
   const HandleLaunchPadMenu = () => {
     setLaunchPadMenu(!LaunchPadMenu);
   };
   const HandleStakingMenu = () => {
     setStakingMenu(!stakingMenu);
-  };
-  const HandleIndexFundMenu = () => {
-    setIndexFundMenu(!IndexFundMenu);
   };
 
   const itemVariants = {
@@ -59,9 +49,7 @@ export default function MobileMenu({ handleMobileClick, openMM }) {
         handleMobileClick();
       }
     };
-
     document.addEventListener("mousedown", checkIfClickedOutside);
-
     return () => {
       // Cleanup the event listener
       document.removeEventListener("mousedown", checkIfClickedOutside);
@@ -138,14 +126,15 @@ export default function MobileMenu({ handleMobileClick, openMM }) {
                       <Link href="/launchpad">
                         <a>Go to App</a>
                       </Link>
-                      <Link href="/launchpad">
-                        <a>Apply for IDO</a>
+                      <Link href="https://t.me/serratim">
+                        <a target="_blank" rel="noopener noreferrer">
+                          Apply for IDO
+                        </a>
                       </Link>
-                      <Link href="/launchpad">
-                        <a>IDO staking</a>
-                      </Link>
-                      <Link href="/launchpad">
-                        <a>How to participate</a>
+                      <Link href="https://docs.texostarter.com">
+                        <a target="_blank" rel="noopener noreferrer">
+                          How to participate
+                        </a>
                       </Link>
                     </motion.div>
                   )}
@@ -175,86 +164,13 @@ export default function MobileMenu({ handleMobileClick, openMM }) {
                       duration: "0.75",
                     }}
                   >
-                    <Link href="/launchpad">
-                      <a>Go to App</a>
-                    </Link>
-                    <Link href="/launchpad">
-                      <a>IDO staking</a>
-                    </Link>
-                    <Link href="/launchpad">
-                      <a>How to participate</a>
-                    </Link>
-                  </motion.div>
-                )}
-              </motion.div>
-              <motion.div
-                className={styles.NavItemCont}
-                variants={itemVariants}
-              >
-                <div onClick={HandleLiquidityMenu} className={styles.Links}>
-                  <BiCoinStack />
-                  <p>Liquidity</p>
-                </div>
-                {liquidityMenu && (
-                  <motion.div
-                    className={styles.productNavList}
-                    initial={{ opacity: 0, y: "-50%" }}
-                    animate={{ opacity: 1, y: "0%" }}
-                    exit={{
-                      opacity: 0,
-                      y: "-50%",
-                      transition: { duration: "0.35" },
-                    }}
-                    transition={{
-                      type: "spring",
-                      stiffness: "150",
-                      duration: "0.75",
-                    }}
-                  >
-                    <Link href="./launchpad">
-                      <a>Go to App</a>
-                    </Link>
-                    <Link href="./launchpad">
-                      <a>Apply for IDO</a>
-                    </Link>
-                    <Link href="./launchpad">
-                      <a>IDO staking</a>
-                    </Link>
-                    <Link href="./launchpad">
-                      <a>How to participate</a>
-                    </Link>
-                  </motion.div>
-                )}
-              </motion.div>
-              <motion.div
-                className={styles.NavItemCont}
-                variants={itemVariants}
-              >
-                <div onClick={HandleIndexFundMenu} className={styles.Links}>
-                  <AiOutlineFundProjectionScreen />
-                  <p>IndexFund</p>
-                </div>
-                {IndexFundMenu && (
-                  <motion.div
-                    className={styles.productNavList}
-                    initial={{ opacity: 0, y: "-50%" }}
-                    animate={{ opacity: 1, y: "0%" }}
-                    exit={{
-                      opacity: 0,
-                      y: "-50%",
-                      transition: { duration: "0.35" },
-                    }}
-                    transition={{
-                      type: "spring",
-                      stiffness: "150",
-                      duration: "0.75",
-                    }}
-                  >
-                    <Link href="/launchpad">
+                    <Link href="/staking">
                       <a>Open App</a>
                     </Link>
-                    <Link href="/">
-                      <a>How it works</a>
+                    <Link href="https://samaswap.com/#/pool/v2">
+                      <a target="_blank" rel="noopener noreferrer">
+                        Create Liquidity pool
+                      </a>
                     </Link>
                   </motion.div>
                 )}

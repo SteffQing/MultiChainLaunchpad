@@ -54,6 +54,7 @@
   align-items: center;
   -moz-column-gap: 1.5rem;
        column-gap: 1.5rem;
+  cursor: pointer;
 }
 
 .absoluteElements {

@@ -5,8 +5,6 @@ import Link from "next/link";
 import { HiOutlineHome } from "react-icons/hi"; //Home
 import { GiMissileLauncher } from "react-icons/gi"; //launchpad
 import { RiExchangeFundsFill } from "react-icons/ri"; //stake
-import { AiOutlineFundProjectionScreen } from "react-icons/ai"; //index fund
-import { BiCoinStack } from "react-icons/bi"; //liquidity
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function SideBar({ open, handleClick }) {
@@ -50,11 +48,7 @@ export default function SideBar({ open, handleClick }) {
   // Icons Hover Startes
   const [HomeLabel, setHomeLable] = useState(false);
   const [LaunchPadLable, setLaunchPadLabel] = useState(false);
-  const [liquidityLabel, setLiquidityLabel] = useState(false);
   const [stakingLabel, setStakingLabel] = useState(false);
-  const [indexFundLabel, setIndexFundLabel] = useState(false);
-  const [aboutLabel, setAboutLabel] = useState(false);
-  const [docsLabel, setDocsLabel] = useState(false);
   //handlers for icons hover
   const HandleHomeLabel = () => {
     setHomeLable(!HomeLabel);
@@ -62,17 +56,10 @@ export default function SideBar({ open, handleClick }) {
   const HandleLaunchPadLabel = () => {
     setLaunchPadLabel(!LaunchPadLable);
   };
-  const HandleliquidityLabel = () => {
-    setLiquidityLabel(!liquidityLabel);
-  };
   const HandlestakingLabel = () => {
     setStakingLabel(!stakingLabel);
   };
-  const HandleIndexFundLabel = () => {
-    setIndexFundLabel(!indexFundLabel);
-  };
 
-  //framer motion variants
   const itemVariants = {
     closed: {
       opacity: 0,
@@ -98,9 +85,6 @@ export default function SideBar({ open, handleClick }) {
       },
     },
   };
-
-  //icons styleing
-
   return (
     <motion.div
       className={styles.sideBar}
@@ -188,64 +172,18 @@ export default function SideBar({ open, handleClick }) {
                       duration: "0.75",
                     }}
                   >
-                    <span>Go to App</span>
-                    <span>Apply for IDO</span>
-                    <span>IDO staking</span>
-                    <span>How to participate</span>
+                    <Link href="/launchpad">
+                      <a>Go to App</a>
+                    </Link>
+                    <Link href="https://t.me/serrafin">
+                      <a>Apply for IDO</a>
+                    </Link>
+                    <Link href="https://docs.texostarter.com">
+                      <a>How to participate</a>
+                    </Link>
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
-          )}
-        </motion.div>
-        <motion.div variants={itemVariants} className={styles.sidebarNavs}>
-          <div
-            className={styles.sideBarNavIcons}
-            onMouseOver={!open && HandleliquidityLabel}
-            onMouseOut={liquidityLabel && HandleliquidityLabel}
-          >
-            <BiCoinStack fontSize="1.5rem" />
-            {!open && liquidityLabel && <div>Liquidity</div>}
-          </div>
-          {open && (
-            <div className={styles.sideBarNavTex}>
-              <motion.div
-                whileHover={{ scale: 1.1, transition: { duration: 0.5 } }}
-                whileTap={{ scale: 0.85 }}
-                initial={{ marginLeft: "11vw", opacity: 0, color: "black" }}
-                animate={{ marginLeft: "0vw", opacity: 1, color: "white" }}
-                exit={{
-                  marginLeft: "20vh",
-                  transition: { duration: 3, delay: 2 },
-                }}
-                transition={{ duration: 1.4 }}
-                onClick={HandleStakingMenu}
-              >
-                <p>Staking</p>
-              </motion.div>
-              {stakingMenu && (
-                <motion.div
-                  className={styles.productNavList}
-                  initial={{ opacity: 0, y: "-50%" }}
-                  animate={{ opacity: 1, y: "0%" }}
-                  exit={{
-                    opacity: 0,
-                    y: "-50%",
-                    transition: { duration: "0.35" },
-                  }}
-                  transition={{
-                    type: "spring",
-                    stiffness: "150",
-                    duration: "0.75",
-                  }}
-                >
-                  <Link href="#">
-                    <a>
-                      <span>Go to App</span>
-                    </a>
-                  </Link>
-                </motion.div>
-              )}
             </div>
           )}
         </motion.div>
@@ -272,7 +210,7 @@ export default function SideBar({ open, handleClick }) {
                 transition={{ duration: 1.8 }}
                 onClick={HandleLiquidityMenu}
               >
-                <p>Liquidity</p>{" "}
+                <p>Staking</p>{" "}
               </motion.div>
               <AnimatePresence>
                 {liquidityMenu && (
@@ -291,61 +229,12 @@ export default function SideBar({ open, handleClick }) {
                       duration: "0.75",
                     }}
                   >
-                    <span>Open App</span>
-                    <span>Create Liquidity pool</span>
-                    <span>How it works</span>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          )}
-        </motion.div>
-        <motion.div className={styles.sidebarNavs} variants={itemVariants}>
-          <div
-            onClick={handleClick}
-            className={styles.sideBarNavIcons}
-            onMouseOver={!open && HandleIndexFundLabel}
-            onMouseOut={indexFundLabel && HandleIndexFundLabel}
-          >
-            <AiOutlineFundProjectionScreen fontSize="1.5rem" />
-            {!open && indexFundLabel && <div>IndexFund</div>}
-          </div>
-          {open && (
-            <div className={styles.sideBarNavTex}>
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                initial={{ marginLeft: "9vw", opacity: 0, color: "black" }}
-                animate={{ marginLeft: "0vw", opacity: 1, color: "white" }}
-                exit={{
-                  marginLeft: "20vh",
-                  transition: { duration: 3, delay: 2 },
-                }}
-                transition={{ duration: 1.15 }}
-                onClick={HandleIndexFundMenu}
-              >
-                <Link href="#">
-                  <p>IndexFund</p>
-                </Link>
-              </motion.div>
-              <AnimatePresence>
-                {IndexFundMenu && (
-                  <motion.div
-                    className={styles.productNavList}
-                    initial={{ opacity: 0, y: "-50%" }}
-                    animate={{ opacity: 1, y: "0%" }}
-                    exit={{
-                      opacity: 0,
-                      y: "-50%",
-                      transition: { duration: "0.35" },
-                    }}
-                    transition={{
-                      type: "spring",
-                      stiffness: "150",
-                      duration: "0.75",
-                    }}
-                  >
-                    <span>Open App</span>
-                    <span>How it works</span>
+                    <Link href="/staking">
+                      <a>Open App</a>
+                    </Link>
+                    <Link href="/launchpad">
+                      <a>Create Liquidity pool</a>
+                    </Link>
                   </motion.div>
                 )}
               </AnimatePresence>

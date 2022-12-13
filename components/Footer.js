@@ -14,12 +14,12 @@ export default function Footer() {
           </p>
           <div className={styles.iconSocial} style={{ display: "flex" }}>
             <Link href="https://twitter.com/texostarter">
-              <a>
+              <a target="_blank" rel="noopener noreferrer">
                 <BsTwitter />
               </a>
             </Link>
             <Link href="https://t.me/texostarter">
-              <a>
+              <a target="_blank" rel="noopener noreferrer">
                 <BsTelegram />
               </a>
             </Link>

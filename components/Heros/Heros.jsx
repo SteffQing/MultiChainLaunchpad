@@ -10,19 +10,19 @@ const Heros = () => {
   const BgImages = [
     {
       id: "BG1",
-      Image: "/eth.png",
+      Image: "/blob1.svg",
     },
     {
       id: "BG2",
-      Image: "/usdt.png",
+      Image: "/blob2.svg",
     },
     {
       id: "BG3",
-      Image: "/eth.png",
+      Image: "/blob3.svg",
     },
     {
       id: "BG4",
-      Image: "/usdt.png",
+      Image: "/blob4.svg",
     },
   ];
   return (
@@ -32,8 +32,8 @@ const Heros = () => {
           <div key={image.id} className={styles.bg}>
             <Image
               src={image.Image}
-              width={isDesktop ? 100 : 70}
-              height={isDesktop ? 100 : 70}
+              width={isDesktop ? 200 : 170}
+              height={isDesktop ? 200 : 170}
               alt="images"
             />
           </div>
