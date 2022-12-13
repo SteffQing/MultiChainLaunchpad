@@ -27,26 +27,26 @@ const Heros = () => {
           BgImages.map((d, i)=>{
             <div key={i}>
               <div className={styles.blurBG}></div>
-              <Image src={d.Image} width={isDesktop?60:30} height={isDesktop?60:30} alt="images"/>
+              <Image src={d.Image} width={isDesktop?60:50} height={isDesktop?60:50} alt="images"/>
             </div>
           })
         } */}
         <div className={styles.backgrounds}>
             <div className={styles.bg}>
                 <div className={styles.Blur1}></div>
-                <Image src="/eth.png" width={isDesktop?60:30} height={isDesktop?60:30} alt="images"/>
+                <Image src="/eth.png" width={isDesktop?60:50} height={isDesktop?60:50} alt="images"/>
             </div>
             <div className={styles.BG2}>
                 <div className={styles.Blur2}></div>
-                <Image src="/usdt.png" width={isDesktop?60:30} height={isDesktop?60:30} alt="images"/>
+                <Image src="/usdt.png" width={isDesktop?60:50} height={isDesktop?60:50} alt="images"/>
             </div>
             <div className={styles.BG3}>
                 <div className={styles.Blur3}></div>
-                <Image src="/usdt.png" width={isDesktop?60:30} height={isDesktop?60:30} alt="images"/>
+                <Image src="/usdt.png" width={isDesktop?60:50} height={isDesktop?60:50} alt="images"/>
             </div>
             <div className={styles.BG4}>
                 <div className={styles.Blur4}></div>
-                <Image src="/eth.png" width={isDesktop?60:30} height={isDesktop?60:30} alt="images"/>
+                <Image src="/eth.png" width={isDesktop?60:50} height={isDesktop?60:50} alt="images"/>
             </div>
         </div>
 
