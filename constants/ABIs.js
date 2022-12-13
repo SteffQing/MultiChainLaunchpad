@@ -861,6 +861,7 @@ const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
 const FactoryInstance = new Contract(Factory, factoryABI, provider);
 const tokenInstance = new Contract(StableCoin, tokenABI, provider);
 const queryHost = "https://sama.texostarter.com";
+// const queryHost = "http://localhost:3000";
 
 const contracts = {
   FactoryInstance,

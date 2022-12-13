@@ -21,9 +21,8 @@
     background-color: rgba(0, 0, 0, 0.7);
     padding: 95px 24px;
     height: 100vh;
-    // inset: 0px;
+    top: 0;
     left: 0;
-    // overflow: auto;
     display: flex;
     transform: translate3d(0px, 0px, 0px);
     will-change: opacity;
@@ -32,12 +31,11 @@
     backface-visibility: hidden;
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
-    // perspective: 1000px;
     align-items: center;
     justify-content: center;
     position: fixed;
-    width: 100vw;
-    // z-index: 2222;
+    width: 100%;
+    z-index: 3;
     cursor: default;
     .closeModal {
       display: flex;
