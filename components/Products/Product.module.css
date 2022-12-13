@@ -1,0 +1,43 @@
+.container {
+  background-color: #0c2a30;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1vw 7vw;
+}
+.container h2 {
+  text-align: center;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.ProductsList {
+  color: #3bd0f1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: min(500px, 100%);
+  margin: 1rem 0;
+}
+.ProductsList div {
+  border: 1px solid #3bd0f1;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  justify-content: space-between;
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+.ProductsList div svg,
+.ProductsList div p {
+  transition: all 0.3s ease-in-out;
+}
+.ProductsList div:hover p {
+  transform: scale(1.03);
+}
+.ProductsList div:hover svg {
+  transform: translateX(5px);
+}/*# sourceMappingURL=Product.module.css.map */

@@ -1,0 +1,29 @@
+.Navbar {
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  position: fixed;
+  width: 100%;
+}
+
+.Schildren {
+  width: 100%;
+  display: flex;
+}
+
+.deskTopSideBar {
+  position: fixed;
+  top: 60px;
+  border-radius: 8px;
+  left: 1.4rem;
+  z-index: 10;
+  height: 92%;
+}
+
+.children {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  width: 100%;
+}/*# sourceMappingURL=Layout.module.css.map */

@@ -1,0 +1,66 @@
+.sideBar {
+  padding: 1rem 0;
+  height: 100%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #fff;
+  border-right: 1.2px solid #2fc0db;
+  .productNavList {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.7rem;
+    margin-bottom: -1.5rem;
+    margin-left: 1.2rem;
+    gap: 8px;
+    font-size: 0.7rem;
+  }
+  .NavLinks {
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative;
+    .absoluteElements {
+      align-items: center;
+      display: flex;
+      margin: 1.5rem 0;
+      width: 100%;
+      div {
+        flex: 1;
+      }
+    }
+  }
+  .sideBarNavIcons {
+    display: flex;
+    div {
+      padding: 0 1rem;
+    }
+    .hoverDetails {
+      margin-left: 3rem;
+      background-color: #fff;
+      color: black;
+      border-radius: 2rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .sidebarNavs {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    cursor: pointer;
+    color: #fff;
+    .NavIcon {
+      color: #fff;
+    }
+    .sidebarNavs {
+      display: flex;
+      flex-direction: column;
+      padding: 0.5rem 0rem 0rem 1rem;
+    }
+  }
+}

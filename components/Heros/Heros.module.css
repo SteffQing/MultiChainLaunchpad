@@ -1,0 +1,127 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 0vw 5vw;
+  height: min(100vh, 600px);
+}
+.main .heroContent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  z-index: 3;
+}
+.main .heroContent .leftHandParagraph_1 {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-weight: 600;
+  text-align: center;
+}
+.main .heroContent .leftHandParagraph_2 {
+  font-size: clamp(1.2rem, 1.75vw, 1.8rem);
+  text-align: center;
+  padding: 1rem 0rem;
+  font-weight: 100;
+}
+.main .heroContent .leftHandBtns {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.main .heroContent .leftHandBtns .discover {
+  color: #3bd0f1;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: 1px solid #3bd0f1;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.main .heroContent .leftHandBtns .discover:hover {
+  background-color: #3bd0f1;
+  color: #fff;
+}
+.main .heroContent .leftHandBtns .learnMore {
+  color: #3bd0f1;
+  border-bottom: 1px solid #3bd0f1;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-weight: 600;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.main .heroContent .leftHandBtns .learnMore:hover {
+  color: #fff;
+  border-bottom: 1px solid transparent;
+}
+@media (min-width: 720px) {
+  .main {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2rem 2rem;
+  }
+}
+
+.heroImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.heroImage .card {
+  width: 340px;
+  height: 320px;
+  position: relative;
+  display: flex;
+  justify-content: right;
+}
+.heroImage .closeCard {
+  background-color: pink;
+  width: 280px;
+  height: 320px;
+  z-index: 1;
+}
+.heroImage .openingCard {
+  background-color: purple;
+  width: 280px;
+  height: 320px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  transform-origin: bottom left;
+  -webkit-animation: reveal 1.5s ease-in-out forwards;
+          animation: reveal 1.5s ease-in-out forwards;
+}
+
+@-webkit-keyframes reveal {
+  0% {
+    transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(-60px);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes reveal {
+  0% {
+    transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(-60px);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}/*# sourceMappingURL=Heros.module.css.map */

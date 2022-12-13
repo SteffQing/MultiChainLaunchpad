@@ -1,0 +1,204 @@
+.container .connect {
+  display: block;
+  cursor: pointer;
+  color: rgb(245, 244, 244);
+  font-weight: 400;
+  border-radius: 5rem;
+  font-size: 15px;
+}
+.container .disconnect {
+  display: block;
+  cursor: pointer;
+  color: rgb(1, 0, 0);
+  font-weight: 400;
+  border-radius: 5rem;
+  font-size: 15px;
+}
+.container .modal {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 95px 24px;
+  height: 100vh;
+  left: 0;
+  display: flex;
+  transform: translate3d(0px, 0px, 0px);
+  will-change: opacity;
+  color: black;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+  cursor: default;
+}
+.container .modal .closeModal {
+  display: flex;
+  position: fixed;
+  color: #999999;
+  top: 32px;
+  right: 24px;
+  background-color: black;
+  transform: none;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  font-size: 30px;
+  justify-content: center;
+  border-radius: 99999px;
+  cursor: pointer;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  will-change: transform;
+  transition: transform 0.2s ease 0s;
+}
+.container .modal .closeModal:hover {
+  transform: scale(1.1);
+}
+.container .modal .modalMenu {
+  opacity: 1;
+  transform: none;
+  outline: none;
+  border-radius: 24px;
+  width: auto;
+  min-width: 350px;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #0c2a30;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+.container .modal .modalMenu .modalInternal {
+  padding: 50px;
+}
+.container .modal .modalMenu .modalInternal h1 {
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: -0.02em;
+}
+.container .modal .modalMenu .modalInternal .wallets {
+  display: grid;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.container .modal .modalMenu .modalInternal .wallets p {
+  text-align: center;
+  transition: all 500ms;
+  color: #999999;
+}
+.container .modal .modalMenu .modalInternal .wallets .Learn {
+  margin: auto;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.container .modal .modalMenu .modalInternal .wallets .walletLists {
+  display: grid;
+  gap: 12px;
+}
+.container .modal .modalMenu .modalInternal .wallets .walletLists .walletList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  will-change: transform;
+  transition: all 500ms;
+}
+.container .modal .modalMenu .modalInternal .wallets .walletLists .walletList:hover {
+  transform: scale(1.05);
+}
+.container .board {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 95px 24px;
+  height: 100vh;
+  inset: 0px;
+  overflow: auto;
+  color: black;
+  display: flex;
+  transform: translate3d(0px, 0px, 0px);
+  will-change: opacity;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  perspective: 1000px;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  cursor: default;
+}
+.container .board .closeModal {
+  display: flex;
+  position: fixed;
+  color: white;
+  top: 32px;
+  right: 24px;
+  transform: none;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  font-size: 30px;
+  justify-content: center;
+  border-radius: 99999px;
+  cursor: pointer;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  will-change: transform;
+  transition: transform 0.2s ease 0s;
+}
+.container .board .closeModal:hover {
+  transform: scale(1.1);
+}
+.container .board .smallBoard {
+  opacity: 1;
+  transform: none;
+  outline: none;
+  border-radius: 24px;
+  width: auto;
+  min-width: 350px;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #0c2a30;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  transition: all 500ms;
+}
+.container .board .smallBoard p {
+  margin: 20px;
+  color: #999999;
+  transition: all 500ms;
+}
+.container .board .smallBoard button {
+  border: none;
+  color: black;
+  background: transparent;
+  font-size: 22px;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: all 500ms ease-in-out;
+}
+.container .board .smallBoard button:hover {
+  transform: scale(1.05);
+  color: aqua;
+}
+
+/*# sourceMappingURL=Connect.module.css.map *//*# sourceMappingURL=Connect.module.css.map */

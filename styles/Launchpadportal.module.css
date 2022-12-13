@@ -1,0 +1,246 @@
+.container {
+  background-color: #0e0d0d;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 7vw;
+  color: #3bd0f1;
+}
+.container .Header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container .Header .heroImageContainer {
+  display: block;
+  position: relative;
+}
+.container .Header h3 {
+  padding: 1rem;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  font-weight: 600;
+}
+.container .description {
+  max-width: 95%;
+  margin: 2rem 0rem;
+}
+.container .description h4 {
+  font-size: clamp(1.2rem, 1.6vw, 1.88em);
+  font-weight: 200;
+}
+.container .IDOdetails {
+  border: 1px solid #3bd0f1;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.container .IDOdetails .absolute {
+  position: relative;
+}
+.container .IDOdetails .absolute .coinPrice {
+  color: #ffcca0;
+  border: 1px solid #ffcca0;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  padding: 0.35rem 0.75rem;
+  font-size: clamp(1rem, 1.4rem, 1.6vw);
+}
+.container .IDOdetails .absolute .image {
+  padding: 0.5rem 0rem;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.container .IDOdetails .relative {
+  padding: 4rem 1.5rem 2rem 1.5rem;
+}
+.container .IDOdetails .relative p {
+  font-size: clamp(1.1rem, 1.5rem, 2vw);
+}
+.container .IDOdetails .relative span {
+  font-size: clamp(1.3rem, 1.65rem, 2.5vw);
+  font-weight: 600;
+}
+.container .IDOdetails .relative .progressSection {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  z-index: 1;
+}
+.container .IDOdetails .relative .progressSection .progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .IDOdetails .relative .progressSection .progress span {
+  font-size: clamp(0.9rem, 1.3vw, 1.28em);
+  font-weight: 200;
+  padding: 1rem 0;
+}
+.container .IDOdetails .relative .progressSection .progressBarContainer {
+  background-color: #0c2a30;
+  display: flex;
+  height: 28px;
+  border-radius: 2px;
+}
+.container .IDOdetails .relative .progressSection .progressBarContainer span {
+  background-color: #3bd0f1;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 2px;
+}
+@media (min-width: 380px) {
+  .container .IDOdetails .relative .progressSection {
+    margin: 1rem 2rem;
+  }
+}
+.container .IDOdetails .relative .purchaseSection {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.container .IDOdetails .relative .purchaseSection p {
+  margin: auto;
+  font-size: clamp(1rem, 1.3vw, 1.28em);
+  margin-top: 10px;
+}
+.container .IDOdetails .relative .purchaseSection button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #3bd0f1;
+  font-size: clamp(1rem, 1.2rem, 1.5vw);
+  border-radius: 0.25rem;
+  transition: all 0.15s ease-in-out;
+  color: #fff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  margin: 0 auto;
+}
+.container .IDOdetails .relative .purchaseSection button:hover {
+  background-color: #3bd0f1;
+  color: #000;
+}
+.container .IDOdetails .relative .purchaseModal {
+  z-index: 100;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .IDOdetails .relative .purchaseModal .closeBtn {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  transition: 500ms;
+  cursor: pointer;
+}
+.container .IDOdetails .relative .purchaseModal .closeBtn:hover {
+  scale: 1.1;
+}
+.container .IDOdetails .relative .purchaseModal .closeBtn:focus {
+  scale: 0.7;
+}
+.container .IDOdetails .relative .purchaseModal .innerModal {
+  position: relative;
+  background-color: #0c2a30;
+  padding: 2rem 1.5rem;
+  border-radius: 7px;
+  min-width: 300px;
+  width: 450px;
+  gap: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .IDOdetails .relative .purchaseModal .innerModal button {
+  width: 50%;
+  min-width: 30px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  padding: 0.3rem 0.6rem;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid #3bd0f1;
+  font-size: clamp(1rem, 1.2rem, 1.5vw);
+  border-radius: 0.25rem;
+  transition: all 0.15s ease-in-out;
+  color: #fff;
+  transition: 500ms;
+}
+.container .IDOdetails .relative .purchaseModal .innerModal button:hover {
+  background-color: #3bd0f1;
+  color: #000;
+}
+.container .IDOdetails .relative .purchaseModal .innerModal .inputDiv .input {
+  border: 1px solid #3bd0f1;
+  border-radius: 5px;
+  outline: none;
+  padding: 0.5rem 1rem;
+  background: none;
+  color: #fff;
+}
+.container .IDOdetails .relative .purchaseModal .innerModal .text {
+  font-size: clamp(1rem, 1.2rem, 1.5vw);
+  color: #fff;
+  text-align: center;
+}
+.container .informationSection {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+@media (min-width: 600px) {
+  .container .informationSection {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.container .informationSection .poolInformation {
+  border: 1.3px solid #3bd0f1;
+  border-radius: 3px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+@media (min-width: 600px) {
+  .container .informationSection .poolInformation {
+    width: 45%;
+  }
+}
+.container .informationSection .poolInformation .infoHeaders {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0.8rem 0rem;
+}
+.container .informationSection .poolInformation .infoHeaders p {
+  padding: 0rem 0 0 0.5rem;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 550;
+}
+.container .informationSection .poolInformation .infoList div {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.3rem;
+  font-size: clamp(0.8rem, 1.3vw, 1.2em);
+}
+.container .informationSection .poolInformation .infoList div p {
+  color: #999999;
+}/*# sourceMappingURL=Launchpadportal.module.css.map */
