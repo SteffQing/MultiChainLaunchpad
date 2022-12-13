@@ -7,40 +7,33 @@ export default function Footer() {
     <footer className={styles.main}>
       <div className={styles.footer}>
         <div className={styles.project}>
-          <h4>Amestarter</h4>
+          <h4>TexoStarter</h4>
           <p>
-            Your unlimited access card to a Web3.0 ecosystem of infinite
-            possibilities built for the Blockchain.
+            Get early mover advantage to Innovative products on the EVM Chain.
+            Interoperability at the core of development
           </p>
           <div className={styles.iconSocial} style={{ display: "flex" }}>
-            <Link href="https://twitter.com/amestarter">
+            <Link href="https://twitter.com/texostarter">
               <a>
                 <BsTwitter />
               </a>
             </Link>
-            <Link href="https://t.me/amestarter">
+            <Link href="https://t.me/texostarter">
               <a>
                 <BsTelegram />
-              </a>
-            </Link>
-            <Link href="https://medium.com/amestarter">
-              <a>
-                <BsMedium />
               </a>
             </Link>
           </div>
         </div>
         <aside>
           <div className={styles.company}>
-            <h5>Company</h5>
+            <h5>Protocol</h5>
             <p>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                About Us
-              </a>
+              <a href="#">About Us</a>
             </p>
             <p>
               <a
-                href="https://docs.amestarter.com/products"
+                href="https://docs.texostarter.com/launchpad"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -48,9 +41,7 @@ export default function Footer() {
               </a>
             </p>
             <p>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Portfolio
-              </a>
+              <a href="#">Portfolio</a>
             </p>
           </div>
           <div className={styles.socials}>
@@ -66,7 +57,7 @@ export default function Footer() {
             </p>
             <p>
               <a
-                href="mailto:support@amestarter.com"
+                href="https://t.me/serratim"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -75,7 +66,7 @@ export default function Footer() {
             </p>
             <p>
               <a
-                href="mailto:business@amestarter.com"
+                href="https://t.me/serratim"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -87,7 +78,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.footer2}>
-        <p>Copyright &copy; 2022 Amestarter</p>
+        <p>Copyright &copy; 2022 TexoStarter</p>
       </div>
     </footer>
   );

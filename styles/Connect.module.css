@@ -9,7 +9,7 @@
 .container .disconnect {
   display: block;
   cursor: pointer;
-  color: rgb(1, 0, 0);
+  color: #fff;
   font-weight: 400;
   border-radius: 5rem;
   font-size: 15px;
@@ -126,6 +126,7 @@
   background-color: rgba(0, 0, 0, 0.8);
   padding: 95px 24px;
   height: 100vh;
+  z-index: 9;
   inset: 0px;
   overflow: auto;
   color: black;
@@ -167,7 +168,7 @@
   opacity: 1;
   transform: none;
   outline: none;
-  border-radius: 24px;
+  border-radius: 8px;
   width: auto;
   min-width: 350px;
   align-content: center;
@@ -178,12 +179,14 @@
   background-color: #0c2a30;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   padding: 50px;
   transition: all 500ms;
+  outline: transparent solid 2px;
+  outline-offset: 2px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 .container .board .smallBoard p {
-  margin: 20px;
+  margin: 10px;
   color: #999999;
   transition: all 500ms;
 }

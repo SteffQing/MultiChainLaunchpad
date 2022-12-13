@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import test from "../assets/test2.png";
 import Image from "next/image";
 import styles from "../styles/launchpad.module.css";
 import { contracts } from "../constants/ABIs";

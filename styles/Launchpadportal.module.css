@@ -2,7 +2,7 @@
   background-color: #0e0d0d;
   display: flex;
   flex-direction: column;
-  padding: 2rem 7vw;
+  padding: 80px 7vw;
   color: #3bd0f1;
 }
 .container .Header {
@@ -13,6 +13,8 @@
 .container .Header .heroImageContainer {
   display: block;
   position: relative;
+  overflow: hidden;
+  border-radius: 50%;
 }
 .container .Header h3 {
   padding: 1rem;
@@ -204,7 +206,7 @@
   flex-direction: column;
   margin-top: 1rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 690px) {
   .container .informationSection {
     flex-direction: row;
     justify-content: space-between;
@@ -217,7 +219,7 @@
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 690px) {
   .container .informationSection .poolInformation {
     width: 45%;
   }
@@ -243,4 +245,11 @@
 }
 .container .informationSection .poolInformation .infoList div p {
   color: #999999;
+}
+.container .informationSection .poolInformation .infoList div p,
+.container .informationSection .poolInformation .infoList div span {
+  flex: 1;
+}
+.container .informationSection .poolInformation .infoList div span {
+  text-align: right;
 }/*# sourceMappingURL=Launchpadportal.module.css.map */

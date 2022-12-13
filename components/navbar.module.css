@@ -3,8 +3,9 @@
   justify-content: space-between;
   height: 60px;
   align-items: center;
-  padding: 0 0rem;
+  padding: 0 7%;
   color: #e1f1ff;
+  position: relative;
   left: 0;
   right: 0;
   top: 0;
@@ -16,17 +17,34 @@
   position: fixed;
   border-bottom: 1.2px solid #2fc0db;
 }
+.nav .hamburgerMenu {
+  position: absolute;
+  left: 2%;
+  top: 0;
+  z-index: 2;
+  background-color: #020202;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1.2px solid #2fc0db;
+}
+.nav .hamburgerMenu svg {
+  cursor: pointer;
+}
 .nav .logo {
   font-weight: bold;
   padding: 0 1rem;
   display: flex;
   align-items: center;
+  position: relative;
 }
 .nav .logo .innerLogo {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  position: relative;
 }
 
 .hamburger {
@@ -94,9 +112,6 @@
   }
   .mobileFallback {
     display: none;
-  }
-  .logo {
-    flex: 1;
   }
   .nav .collections,
 .nav .connect {

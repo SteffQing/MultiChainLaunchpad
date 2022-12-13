@@ -5,7 +5,8 @@ import IDOCard from "../../components/IdoCard";
 import { contracts } from "../../constants/ABIs";
 import Link from "next/link";
 export default function LaunchPad({ data }) {
-  const array = data.IDOcontracts;
+  // const array = data.IDOcontracts;
+  const array = ["0xf75150d730CE97C1551e97df39c0A049024e4C25"];
   return (
     <main className={styles.main}>
       <div className={styles.hero}>
@@ -35,8 +36,8 @@ export default function LaunchPad({ data }) {
           <div className={styles.container}>
             <aside>
               <i className={styles.content}>Getting started</i>
-              <h3>Application of AME-X</h3>{" "}
-              <p>The utility of AME-X in the launchpad</p>
+              <h3>Application of TEXO</h3>{" "}
+              <p>The utility of TEXO in the launchpad</p>
             </aside>{" "}
             <aside>Enter</aside>
           </div>
@@ -80,12 +81,12 @@ export default function LaunchPad({ data }) {
   );
 }
 
-export async function getServerSideProps() {
-  let url = `${contracts.queryHost}/api/loadFactory`;
-  const data = await fetch(url)
-    .then((res) => res.json())
-    .catch((err) => {
-      throw new Error();
-    });
-  return { props: { data } };
-}
+// export async function getServerSideProps() {
+//   let url = `${contracts.queryHost}/api/loadFactory`;
+//   const data = await fetch(url)
+//     .then((res) => res.json())
+//     .catch((err) => {
+//       throw new Error();
+//     });
+//   return { props: { data } };
+// }

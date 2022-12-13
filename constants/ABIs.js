@@ -853,11 +853,10 @@ const tokenABI = [
   },
 ];
 
-const StableCoin = "0xAb608b52e3237bF35252a1fa313a3Ba53F73e322";
+const StableCoin = "0x765277EebeCA2e31912C9946eAe1021199B39C61";
 const Factory = "0x6E06f7666f83929CcC3ba2288bEAf387E3125485";
 const deadAddress = "0x0000000000000000000000000000000000000000";
-const rpcUrl = "https://matic-testnet-archive-rpc.bwarelabs.com";
-const arbitrumApiKey = "MEUFCJRPTMA9CZP88341XMBGKUIDG5474G";
+const rpcUrl = "https://rpc.exosama.com";
 const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
 const FactoryInstance = new Contract(Factory, factoryABI, provider);
 const tokenInstance = new Contract(StableCoin, tokenABI, provider);
@@ -868,7 +867,6 @@ const contracts = {
   Factory,
   rpcUrl,
   deadAddress,
-  arbitrumApiKey,
   provider,
   StableCoin,
   tokenInstance,

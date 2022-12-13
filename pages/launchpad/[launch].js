@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { ProjectDesc } from "../../components/IDOportal/ProjectDesc";
 import styles from "../../styles/Launchpadportal.module.css";
 import Image from "next/image";
 import { useWeb3React } from "@web3-react/core";
@@ -16,10 +15,27 @@ export default function Launch({ ipfs, launch }) {
   const [userPurchase, setUserPurchase] = useState(null);
   const [errorModal, setErrorModal] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-
+  const [time, setTime] = useState(null);
+  const [date, setDate] = useState("");
+  const distDate = new Date(1670989800 * 1000);
   const [progressWidth, setProgressBarWidth] = useState(null);
-
   async function CalculateProgressBarWidth() {
+    const currentTimeInMS = new Date().getTime();
+    setTime(Math.floor(currentTimeInMS / 1000));
+    const localTime = new Date(currentTimeInMS);
+    const IDOTimeInSeconds = ipfs.IDOdate * 1000;
+    const IDOTime = new Date(IDOTimeInSeconds);
+    let hours = localTime.getUTCHours();
+    let minutes = localTime.getUTCMinutes();
+    let seconds = localTime.getUTCSeconds();
+    let hour = IDOTime.getUTCHours();
+    let minute = IDOTime.getUTCMinutes();
+    let second = IDOTime.getUTCSeconds();
+    setDate(
+      `${Math.abs(hours - hour)}:${Math.abs(minutes - minute)}:${Math.abs(
+        seconds - second
+      )}`
+    );
     const IDOcontract = new Contract(launch, idoABI, contracts.provider);
     const totalTokenTBSold = ipfs.targetSale;
     const sold = await IDOcontract.totalRaised();
@@ -65,7 +81,6 @@ export default function Launch({ ipfs, launch }) {
   useEffect(() => {
     CalculateProgressBarWidth();
   }, [active, account, trxProcess]);
-
   return (
     <div className={styles.container}>
       <div className={styles.Header}>
@@ -84,14 +99,14 @@ export default function Launch({ ipfs, launch }) {
           </div>
           <span className={styles.coinPrice}>
             <span>
-              1USDT = {1 / `${ipfs.salePrice}`}
+              1SAMA = {1 / `${ipfs.salePrice}`}
               {ipfs.symbol}
             </span>
           </span>
         </div>
         <div className={styles.relative}>
           <p>Total Raised</p>
-          <span>{totalRaised} USDT</span>
+          <span>{totalRaised} SAMA</span>
           <div className={styles.progressSection}>
             <div className={styles.progress}>
               <span className={styles.progressPerHundred}>
@@ -119,7 +134,16 @@ export default function Launch({ ipfs, launch }) {
               </p>
             </div>
           ) : (
-            <div className={styles.purchaseSection}>Participants: Limited</div>
+            <div className={styles.purchaseSection}>
+              <p>Participants: Limited</p>
+              {time && time < ipfs.IDOdate ? (
+                <p>Presale starts in {date}</p>
+              ) : time - 7200 > ipfs.IDOdate ? (
+                <p>Presale has ended</p>
+              ) : (
+                <p>Presale ends in {date}</p>
+              )}
+            </div>
           )}
           {openPurchase && (
             <div className={styles.purchaseModal}>
@@ -153,7 +177,7 @@ export default function Launch({ ipfs, launch }) {
           </div>
           <div className={styles.infoList}>
             <div>
-              <p>Token Distribution:</p> <span>UTC</span>
+              <p>Token Distribution:</p> <span>{distDate.toUTCString()}</span>
             </div>
             <div>
               <p>Minimum Allocation:</p> <span>$0.01</span>
@@ -193,9 +217,6 @@ export default function Launch({ ipfs, launch }) {
             </div>
           </div>
         </div>
-      </div>
-      <div>
-        <ProjectDesc />
       </div>
     </div>
   );

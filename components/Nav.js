@@ -1,12 +1,12 @@
 import styles from "./navbar.module.css";
 import Link from "next/link";
-import { useWeb3React } from "@web3-react/core";
 import Connect from "../constants/Connect";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import { CgClose } from "react-icons/cg";
 import useMediaQuery from "./hooks/useMediaQueryhooks";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { AnimatePresence, motion, useCycle } from "framer-motion";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Navbar({
   open,
@@ -14,7 +14,6 @@ export default function Navbar({
   openMM,
   handleMobileClick,
 }) {
-  const { active } = useWeb3React();
   const isDesktop = useMediaQuery("(min-width: 960px)");
   const [openMobileSideBar, setMobileSideBarOpen] = useState(false);
 
@@ -48,7 +47,8 @@ export default function Navbar({
             <a className={styles.innerLogo}>
               {isDesktop ? (
                 <>
-                  <span>AS</span>
+                  <Image src="/logo.jpg" height="45px" width="45px" />
+                  <span>TexoStarter</span>
                   {isDesktop && (
                     <motion.div
                       className={styles.hamburger}
@@ -56,27 +56,13 @@ export default function Navbar({
                       initial={{ marginLeft: "0" }}
                       animate={open ? "sidebarOpen" : "sidebarClosed"}
                       transition={{ duration: 1, origin: 1 }}
-                    >
-                      {open ? (
-                        <CgClose fontSize=".9em" onClick={handleClick} />
-                      ) : (
-                        <GiHamburgerMenu
-                          fontSize=".8em"
-                          onClick={handleClick}
-                        />
-                      )}
-                    </motion.div>
+                    ></motion.div>
                   )}
                 </>
               ) : (
                 <>
-                  <span>AS</span>
-
-                  {openMM ? (
-                    <CgClose />
-                  ) : (
-                    <GiHamburgerMenu onClick={handleMobileClick} />
-                  )}
+                  <Image src="/logo.jpg" height="45px" width="45px" />
+                  <span>TexoStarter</span>
                 </>
               )}
             </a>
@@ -91,6 +77,19 @@ export default function Navbar({
         </div>
         <div className={styles.collections}>
           <Connect />
+        </div>
+        <div className={styles.hamburgerMenu}>
+          {isDesktop ? (
+            open ? (
+              <CgClose fontSize=".9em" onClick={handleClick} />
+            ) : (
+              <GiHamburgerMenu fontSize=".8em" onClick={handleClick} />
+            )
+          ) : openMM ? (
+            <CgClose />
+          ) : (
+            <GiHamburgerMenu onClick={handleMobileClick} />
+          )}
         </div>
       </nav>
     </div>

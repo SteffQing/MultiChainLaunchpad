@@ -2,7 +2,6 @@ import { useWeb3React } from "@web3-react/core";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { connectors } from "./connectors";
-import { BsBoxArrowUpRight } from "react-icons/bs";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { utils } from "ethers";
 import Image from "next/image";
@@ -10,7 +9,6 @@ import styles from "../styles/Connect.module.css";
 export default function Connect() {
   const { active, account, chainId, library, activate, deactivate } =
     useWeb3React();
-
   const provider = library;
   const [balanceOfAccount, setBal] = useState(null);
   const bal = async () => {
@@ -31,13 +29,13 @@ export default function Connect() {
       );
       return false;
     }
-    if (chainId === "0x13881") {
+    if (chainId === "0x83d") {
       return true;
     }
     try {
       await window.ethereum.request({
         method: "wallet_switchEthereumChain",
-        params: [{ chainId: "0x13881" }],
+        params: [{ chainId: "0x83d" }],
       });
       return true;
     } catch (switchError) {
@@ -50,15 +48,15 @@ export default function Connect() {
             method: "wallet_addEthereumChain",
             params: [
               {
-                chainId: "0x13881",
-                chainName: "Mumbai Network",
-                rpcUrls: ["https://matic-testnet-archive-rpc.bwarelabs.com"],
+                chainId: "0x83d",
+                chainName: "Exosama Network",
+                rpcUrls: ["https://rpc.exosama.com"],
                 nativeCurrency: {
-                  name: "Polygon Matic",
-                  symbol: "MATIC",
+                  name: "ExoSama",
+                  symbol: "SAMA",
                   decimals: 18,
                 },
-                blockExplorerUrls: ["https://mumbai.polygonscan.com"],
+                blockExplorerUrls: ["https://explorer.exosama.com"],
               },
             ],
           });
@@ -124,7 +122,7 @@ export default function Connect() {
         <div
           className={styles.disconnect}
           onClick={() => setDisconnectModal(true)}
-        >{`${account.slice(0, 5)}...${account.slice(38, 42)}`}</div>
+        >{`${account.slice(0, 6)}...${account.slice(37, 42)}`}</div>
       ) : (
         <div className={styles.connect} onClick={() => setConnectModal(true)}>
           Connect
@@ -143,9 +141,7 @@ export default function Connect() {
               <div className={styles.modalInternal}>
                 <h1>Connect Your Wallet</h1>
                 <div className={styles.wallets}>
-                  <p>
-                    Select an option to connect your wallet
-                  </p>
+                  <p>Select an option to connect your wallet</p>
                   <div className={styles.walletLists}>
                     <div className={styles.walletList} onClick={connect}>
                       <Image
@@ -176,11 +172,8 @@ export default function Connect() {
                     </div>
                     <div className={styles.Learn}>
                       <Link href="https://kuswap.finance/#/swap">
-                      <a>
-                        Learn How to Connect
-                      </a>
+                        <a>Learn How to Connect</a>
                       </Link>
-                    
                     </div>
                   </div>
                 </div>
@@ -199,16 +192,19 @@ export default function Connect() {
               <IoIosCloseCircleOutline />
             </div>
             <div className={styles.smallBoard}>
-              <Link href={`https://scan.kcc.io/address/${account}`}>
-                <a>
-                  <p>
-                    {`${account.slice(0, 5)}...${account.slice(39, 42)}`}{" "}
-                    <BsBoxArrowUpRight />
-                  </p>
+              <p>{`${account.slice(0, 6)}...${account.slice(38, 42)}`} </p>
+              <p>Wallet balance: {balanceOfAccount}</p>
+              <Link
+                href={`https://scan.kcc.io/address/${account}`}
+                className={styles.recentTxns}
+              >
+                <a style={{ color: "#ACAFB4" }}>
+                  Check Recent transactions here
                 </a>
               </Link>
-              {/* <p>WKCS balance: 35</p> */}
-              <button onClick={disconnect}>Disconnect</button>
+              <button style={{ marginTop: "1.3rem" }} onClick={disconnect}>
+                Disconnect
+              </button>
             </div>
           </div>
         </div>
