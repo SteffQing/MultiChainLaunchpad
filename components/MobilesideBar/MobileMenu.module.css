@@ -49,6 +49,12 @@
   margin: 1rem auto;
   margin-left: 3rem;
 }
+.Container .NavContainer .NavlinkCont .productNavList a {
+  transition: all 0.3s ease-in-out;
+}
+.Container .NavContainer .NavlinkCont .productNavList a:hover {
+  transform: scale(1.1);
+}
 .Container .NavContainer .NavlinkCont .Links {
   display: flex;
   align-items: center;

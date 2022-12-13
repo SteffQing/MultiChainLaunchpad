@@ -232,8 +232,10 @@ export default function SideBar({ open, handleClick }) {
                     <Link href="/staking">
                       <a>Open App</a>
                     </Link>
-                    <Link href="/launchpad">
-                      <a>Create Liquidity pool</a>
+                    <Link href="https://samaswap.com/#/pool/v2">
+                      <a target="_blank" rel="noopener noreferrer">
+                        Create Liquidity pool
+                      </a>
                     </Link>
                   </motion.div>
                 )}
@@ -244,8 +246,16 @@ export default function SideBar({ open, handleClick }) {
         {open && (
           <div className={styles.absoluteElements}>
             <>
-              <div>Docs</div>
-              <div>About</div>
+              <Link href="https://docs.texostarter.com">
+                <a target="_blank" rel="noopener noreferrer">
+                  Docs
+                </a>
+              </Link>
+              <Link href="https://docs.texostarter.com">
+                <a target="_blank" rel="noopener noreferrer">
+                  About
+                </a>
+              </Link>
             </>
           </div>
         )}

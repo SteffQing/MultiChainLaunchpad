@@ -178,8 +178,16 @@ export default function MobileMenu({ handleMobileClick, openMM }) {
               {open && (
                 <div className={styles.absoluteElements}>
                   <>
-                    <div>Docs</div>
-                    <div>About</div>
+                    <Link href="https://docs.texostarter.com">
+                      <a target="_blank" rel="noopener noreferrer">
+                        Docs
+                      </a>
+                    </Link>
+                    <Link href="https://docs.texostarter.com">
+                      <a target="_blank" rel="noopener noreferrer">
+                        About
+                      </a>
+                    </Link>
                   </>
                 </div>
               )}

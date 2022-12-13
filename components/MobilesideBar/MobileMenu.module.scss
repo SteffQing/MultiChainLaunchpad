@@ -45,6 +45,12 @@
         font-size: clamp(1rem, 1.2rem, 1.5vw);
         margin: 1rem auto;
         margin-left: 3rem;
+        a {
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
       }
       .Links {
         display: flex;

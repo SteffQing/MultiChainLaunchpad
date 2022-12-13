@@ -15,7 +15,13 @@
   margin-bottom: -1.5rem;
   margin-left: 1.2rem;
   gap: 8px;
-  font-size: 0.7rem;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+}
+.sideBar .productNavList a {
+  transition: all 0.3s ease-in-out;
+}
+.sideBar .productNavList a:hover {
+  transform: scale(1.1);
 }
 .sideBar .NavLinks {
   height: 100%;
@@ -31,7 +37,7 @@
   margin: 1.5rem 0;
   width: 100%;
 }
-.sideBar .NavLinks .absoluteElements div {
+.sideBar .NavLinks .absoluteElements a {
   flex: 1;
 }
 .sideBar .sideBarNavIcons {

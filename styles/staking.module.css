@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: min(100vh, 700px);
+}
+.container .staking {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-weight: 600;
+}/*# sourceMappingURL=staking.module.css.map */
