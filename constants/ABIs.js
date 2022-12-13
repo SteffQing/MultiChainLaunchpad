@@ -860,7 +860,7 @@ const rpcUrl = "https://rpc.exosama.com";
 const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
 const FactoryInstance = new Contract(Factory, factoryABI, provider);
 const tokenInstance = new Contract(StableCoin, tokenABI, provider);
-const queryHost = "https://texostarter.com";
+const queryHost = "https://sama.texostarter.com";
 
 const contracts = {
   FactoryInstance,
