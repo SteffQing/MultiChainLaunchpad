@@ -7,13 +7,97 @@
   padding: 1rem;
   margin: 0vw 5vw;
   height: min(100vh, 600px);
-  .heroContent {
+  .backgrounds{
+    position: absolute;
+    top:10vh;
+    width: 80vw;
+    height: 60vh;
+  }
+  .bg{
+    margin-top: 10rem;
+    margin-left: 10rem;
+    .Blur1{
+      background: rgba(255, 255, 255, 0.14);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      background-color: red;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .bg2{
+    margin-top: -12rem;
+    margin-left: 5rem;
+    .Blur1{
+      background: rgba(255, 255, 255, 0.14);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      background-color: red;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .bg3{
+    margin-top: 15rem;
+    margin-left: 0rem;
+    .Blur1{
+      background: rgba(255, 255, 255, 0.14);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      background-color: red;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .bg4{
+    margin-top: -20rem;
+    margin-left: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .Blur4{
+      background: rgba(255, 255, 255, 0.14);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 10000;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .content{
+    display: flex;
+    align-items: center;
+     .heroContent {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     flex: 1;
     z-index: 3;
+    h1{
+      color: rgb(15, 65, 173);
+      font-weight: 500;
+      padding-bottom: 3rem;
+    }
+    h4{
+      .h4Specisl{
+        color: gray;
+        font-weight: 600;
+        padding: .5rem;
+      }
+    }
+    
+    @media (min-width:750px) {
+      max-width: 60%;
+    }
     .leftHandParagraph_1 {
       font-size: clamp(1.5rem, 2vw, 2rem);
       font-weight: 600;
@@ -58,6 +142,8 @@
       }
     }
   }
+  }
+ 
   @media (min-width: 720px) {
     flex-direction: row;
     justify-content: space-between;
