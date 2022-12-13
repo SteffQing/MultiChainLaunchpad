@@ -6,7 +6,7 @@
   gap: 1rem;
   padding: 1rem;
   margin: 0vw 5vw;
-  height: min(100vh, 500px);
+  height: min(100vh, 600px);
 }
 .main .backgrounds {
   position: absolute;
@@ -28,7 +28,56 @@
   width: 100%;
   height: 100%;
 }
-.main .heroContent {
+.main .bg2 {
+  margin-top: -12rem;
+  margin-left: 5rem;
+}
+.main .bg2 .Blur1 {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background-color: red;
+  width: 100%;
+  height: 100%;
+}
+.main .bg3 {
+  margin-top: 15rem;
+  margin-left: 0rem;
+}
+.main .bg3 .Blur1 {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background-color: red;
+  width: 100%;
+  height: 100%;
+}
+.main .bg4 {
+  margin-top: -20rem;
+  margin-left: 13rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .bg4 .Blur4 {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+}
+.main .content {
+  display: flex;
+  align-items: center;
+}
+.main .content .heroContent {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -36,23 +85,38 @@
   flex: 1;
   z-index: 3;
 }
-.main .heroContent .leftHandParagraph_1 {
+.main .content .heroContent h1 {
+  color: rgb(15, 65, 173);
+  font-weight: 500;
+  padding-bottom: 3rem;
+}
+.main .content .heroContent h4 .h4Specisl {
+  color: gray;
+  font-weight: 600;
+  padding: 0.5rem;
+}
+@media (min-width: 750px) {
+  .main .content .heroContent {
+    max-width: 60%;
+  }
+}
+.main .content .heroContent .leftHandParagraph_1 {
   font-size: clamp(1.5rem, 2vw, 2rem);
   font-weight: 600;
   text-align: center;
 }
-.main .heroContent .leftHandParagraph_2 {
+.main .content .heroContent .leftHandParagraph_2 {
   font-size: clamp(1.2rem, 1.75vw, 1.8rem);
   text-align: center;
   padding: 1rem 0rem;
   font-weight: 100;
 }
-.main .heroContent .leftHandBtns {
+.main .content .heroContent .leftHandBtns {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-.main .heroContent .leftHandBtns .discover {
+.main .content .heroContent .leftHandBtns .discover {
   color: #3bd0f1;
   font-size: clamp(1rem, 1.5vw, 1.5rem);
   font-weight: 600;
@@ -62,11 +126,11 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.main .heroContent .leftHandBtns .discover:hover {
+.main .content .heroContent .leftHandBtns .discover:hover {
   background-color: #3bd0f1;
   color: #fff;
 }
-.main .heroContent .leftHandBtns .learnMore {
+.main .content .heroContent .leftHandBtns .learnMore {
   color: #3bd0f1;
   border-bottom: 1px solid #3bd0f1;
   font-size: clamp(1rem, 1.5vw, 1.5rem);
@@ -75,7 +139,7 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.main .heroContent .leftHandBtns .learnMore:hover {
+.main .content .heroContent .leftHandBtns .learnMore:hover {
   color: #fff;
   border-bottom: 1px solid transparent;
 }
