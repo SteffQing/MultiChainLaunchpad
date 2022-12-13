@@ -9,5 +9,5 @@ export default async function handler(req, res) {
     .catch((err) => {
       throw new Error();
     });
-  res.status(200).json(data);
+  res.json(data);
 }
