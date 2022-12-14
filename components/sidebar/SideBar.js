@@ -243,8 +243,8 @@ export default function SideBar({ open, handleClick }) {
             </div>
           )}
         </motion.div>
-        {open && (
           <div className={styles.absoluteElements}>
+          {open && (
             <>
               <Link href="https://docs.texostarter.com">
                 <a target="_blank" rel="noopener noreferrer">
@@ -257,8 +257,9 @@ export default function SideBar({ open, handleClick }) {
                 </a>
               </Link>
             </>
+)}
           </div>
-        )}
+        
       </motion.div>
     </motion.div>
   );
