@@ -6,7 +6,7 @@ import { contracts } from "../../constants/ABIs";
 import Link from "next/link";
 export default function LaunchPad({ data }) {
   // const array = data.IDOcontracts;
-  const array = ["0xf75150d730CE97C1551e97df39c0A049024e4C25"];
+  const array = [""];
   return (
     <main className={styles.main}>
       <div className={styles.hero}>
@@ -31,15 +31,23 @@ export default function LaunchPad({ data }) {
                 launchpad
               </p>
             </aside>{" "}
-            <aside>Follow</aside>
+            <aside>
+              <Link href="https://docs.texostarter.com">
+                <a>Follow</a>
+              </Link>
+            </aside>
           </div>
           <div className={styles.container}>
             <aside>
               <i className={styles.content}>Getting started</i>
-              <h3>Application of TEXO</h3>{" "}
-              <p>The utility of TEXO in the launchpad</p>
+              <h3>Application of TEXOS</h3>{" "}
+              <p>The utility of TEXOS in the launchpad</p>
             </aside>{" "}
-            <aside>Enter</aside>
+            <aside>
+              <Link href="https://docs.texostarter.com">
+                <a>Enter</a>
+              </Link>
+            </aside>
           </div>
           <div className={styles.container}>
             <aside>
@@ -47,7 +55,11 @@ export default function LaunchPad({ data }) {
               <h3>Apply for launch</h3>{" "}
               <p>New and coming Web3 focused projects </p>
             </aside>{" "}
-            <aside>Apply</aside>
+            <aside>
+              <Link href="https://docs.texostarter.com">
+                <a>Apply</a>
+              </Link>
+            </aside>
           </div>
         </div>
       </div>
@@ -89,4 +101,5 @@ export default function LaunchPad({ data }) {
 //       throw new Error();
 //     });
 //   return { props: { data } };
+// 0xf75150d730CE97C1551e97df39c0A049024e4C25
 // }

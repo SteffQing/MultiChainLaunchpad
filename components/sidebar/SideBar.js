@@ -13,14 +13,14 @@ export default function SideBar({ open, handleClick }) {
     sidebarOpen: {
       width: "18vw",
       transition: {
-        duration: 0.6,
+        duration: 0.7,
       },
     },
 
     sidebarClosed: {
-      width: "100%",
+      width: "5vw",
       transition: {
-        duration: 0.8,
+        duration: 0.7,
       },
     },
   };
@@ -29,20 +29,12 @@ export default function SideBar({ open, handleClick }) {
   //states
   const [LaunchPadMenu, setLaunchPadMenu] = useState(false);
   const [liquidityMenu, setLiquidityMenu] = useState(false);
-  const [stakingMenu, setStakingMenu] = useState(false);
-  const [IndexFundMenu, setIndexFundMenu] = useState(false);
   //states handlers
   const HandleLiquidityMenu = () => {
     setLiquidityMenu(!liquidityMenu);
   };
   const HandleLaunchPadMenu = () => {
     setLaunchPadMenu(!LaunchPadMenu);
-  };
-  const HandleStakingMenu = () => {
-    setStakingMenu(!stakingMenu);
-  };
-  const HandleIndexFundMenu = () => {
-    setIndexFundMenu(!IndexFundMenu);
   };
 
   // Icons Hover Startes

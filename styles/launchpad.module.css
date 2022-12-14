@@ -3,6 +3,7 @@
   color: white;
   position: relative;
   padding: 0 7vw;
+  margin-top: 60px;
 }
 .main .hero {
   display: flex;

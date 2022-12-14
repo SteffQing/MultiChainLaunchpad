@@ -11,27 +11,27 @@ export default function Document() {
         />
         <meta
           name="description"
-          content="KCC #1 decentralized marketplace for NFTs"
+          content="ExoSama #1 decentralized launchpad for NFTs and tokens"
         />
         <meta
           name="keywords"
-          content="TexoStarter/ Launchpad / Texo-starter/ texo starter/ nfts / nft / multichain / exosama / ecosystem / erc20 / NFT / Launch / crypto launch/ NFTs trading"
+          content="TexoStarter/ Launchpad / Texo-starter/ texo starter/ nfts / nft / multichain / exosama / ecosystem / erc20 / NFT / Launch / crypto launch/ NFTs trading / ethereum / sama / mexc"
         />
         <meta name="robots" content="index,follow" />
-        <meta name="author" content="Distance Labs" />
+        <meta name="author" content="TexoStarter" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://mart.distant.finance/" />
-        <meta property="og:title" content="Distant Finance Marketplace" />
+        <meta property="og:url" content="https://sama.texostarter.com/" />
+        <meta property="og:title" content="TexoStarter" />
         <meta property="og:description" content="Multi-chain Launchpad" />
-        <meta property="og:image" content="/logoL.png" />
+        <meta property="og:image" content="/logo.png" />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://mart.distant.finance/" />
-        <meta property="twitter:title" content="Distant Finance Marketplace" />
+        <meta property="twitter:url" content="https://sama.texostarter.com/" />
+        <meta property="twitter:title" content="TexoStarter" />
         <meta
           property="twitter:description"
-          content="KCC #1 decentralized marketplace for NFTs"
+          content="ExoSama #1 decentralized launchpad for NFTs and tokens"
         />
-        <meta property="twitter:image" content="/logoL.png" />
+        <meta property="twitter:image" content="/logo.png" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"

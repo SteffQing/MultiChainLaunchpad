@@ -26,7 +26,6 @@
 .sideBar .NavLinks {
   height: 100%;
   display: flex;
-  align-items: flex-start;
   justify-content: space-around;
   flex-direction: column;
   position: relative;
@@ -39,9 +38,14 @@
 }
 .sideBar .NavLinks .absoluteElements a {
   flex: 1;
+  text-align: center;
 }
 .sideBar .sideBarNavIcons {
   display: flex;
+  flex: 1;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 .sideBar .sideBarNavIcons div {
   padding: 0 1rem;
@@ -68,4 +72,8 @@
   display: flex;
   flex-direction: column;
   padding: 0.5rem 0rem 0rem 1rem;
+}
+
+.sideBarNavTex {
+  flex: 1;
 }/*# sourceMappingURL=SideBar.module.css.map */

@@ -35,32 +35,29 @@ export default function Layout({ children }) {
         )}
       </div>
       <div className={styles.Schildren}>
-        {isDesktop && (
+        {isDesktop ? (
           <>
             <motion.div
               className={styles.deskTopSideBar}
               initial={{ width: "5vw" }}
-              animate={{ width: open ? "18vw`" : "5vw" }}
+              animate={{ width: open ? "18vw" : "5vw" }}
             >
               <SideBar open={open} handleClick={handleClick} />
             </motion.div>
             <motion.div
               className={styles.children}
               initial={{ width: "100%", marginLeft: "35vw" }}
-              animate={{ marginLeft: open ? "19.5vw" : "6.5vw" }}
+              animate={{ marginLeft: open ? "18vw" : "5vw" }}
               transition={{ duration: 0.7 }}
             >
               {children}
               <Footer />
             </motion.div>
           </>
-        )}
-        {isDesktop ? (
-          ""
         ) : (
           <motion.div
             className={styles.children}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
           >
             {children}
             <Footer />
