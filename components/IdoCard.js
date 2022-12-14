@@ -13,6 +13,7 @@ export default function IDOCard({ contract }) {
         .catch((err) => {
           throw new Error();
         });
+      console.log(data);
       data && setIdoData(data);
     };
     main();

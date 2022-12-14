@@ -13,14 +13,14 @@ export default function SideBar({ open, handleClick }) {
     sidebarOpen: {
       width: "18vw",
       transition: {
-        duration: 1,
+        duration: 0.6,
       },
     },
 
     sidebarClosed: {
       width: "100%",
       transition: {
-        duration: 1,
+        duration: 0.8,
       },
     },
   };
@@ -243,7 +243,7 @@ export default function SideBar({ open, handleClick }) {
             </div>
           )}
         </motion.div>
-          <div className={styles.absoluteElements}>
+        <div className={styles.absoluteElements}>
           {open && (
             <>
               <Link href="https://docs.texostarter.com">
@@ -257,9 +257,8 @@ export default function SideBar({ open, handleClick }) {
                 </a>
               </Link>
             </>
-)}
-          </div>
-        
+          )}
+        </div>
       </motion.div>
     </motion.div>
   );

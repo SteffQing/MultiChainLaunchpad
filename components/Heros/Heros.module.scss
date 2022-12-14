@@ -1,30 +1,30 @@
 .main {
   height: min(100vh, 600px);
+  min-height: 100vh;
   position: relative;
-  // margin: 30px 0;
   .backgrounds {
     position: absolute;
     height: 100%;
     width: 100%;
-    .bg {
-      position: absolute;
-      &:nth-child(1) {
-        left: 70%;
-        top: 15%;
-      }
-      &:nth-child(2) {
-        left: 15%;
-        top: 40%;
-      }
-      &:nth-child(3) {
-        left: 10%;
-        top: 80%;
-      }
-      &:nth-child(4) {
-        left: 70%;
-        top: 70%;
-      }
-    }
+    // .bg {
+    //   position: absolute;
+    //   &:nth-child(1) {
+    //     left: 70%;
+    //     top: 15%;
+    //   }
+    //   &:nth-child(2) {
+    //     left: 15%;
+    //     top: 40%;
+    //   }
+    //   &:nth-child(3) {
+    //     left: 10%;
+    //     top: 80%;
+    //   }
+    //   &:nth-child(4) {
+    //     left: 70%;
+    //     top: 70%;
+    //   }
+    // }
   }
   .content {
     display: flex;
@@ -37,6 +37,7 @@
     z-index: 5;
     position: relative;
     .heroContent {
+      margin-top: 60px;
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -53,6 +54,18 @@
           color: gray;
           font-weight: 600;
           padding: 0.5rem;
+        }
+      }
+      div {
+        padding: 0.5rem 1rem;
+        border: 1px solid #2fc0db;
+        border-radius: 5px;
+        background: transparent;
+        transition: all 0.5s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          background-color: #2fc0db;
+          color: black;
         }
       }
       max-width: 80%;

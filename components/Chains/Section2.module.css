@@ -4,8 +4,7 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  margin-top: -3rem;
-  padding-bottom: 4rem;
+  margin: 3rem 0;
   position: relative;
   z-index: 5;
 }
