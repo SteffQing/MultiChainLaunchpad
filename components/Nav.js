@@ -15,6 +15,7 @@ export default function Navbar({
   handleMobileClick,
 }) {
   const isDesktop = useMediaQuery("(min-width: 960px)");
+  const isMobile = useMediaQuery("(min-width: 380px)");
   const [openMobileSideBar, setMobileSideBarOpen] = useState(false);
 
   const menuMovement = {
@@ -48,7 +49,7 @@ export default function Navbar({
               {isDesktop ? (
                 <>
                   <Image
-                    src="/logo.jpg"
+                    src="/logo.png"
                     height="45px"
                     width="45px"
                     alt="logo"
@@ -67,12 +68,12 @@ export default function Navbar({
               ) : (
                 <>
                   <Image
-                    src="/logo.jpg"
+                    src="/logo.png"
                     height="45px"
                     width="45px"
                     alt="logo"
                   />
-                  <span>TexoStarter</span>
+                  {isMobile && <span>TexoStarter</span>}
                 </>
               )}
             </a>

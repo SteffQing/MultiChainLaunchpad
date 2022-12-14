@@ -57,14 +57,16 @@ export default function Launch({ ipfs, launch }) {
       // const approval = await token.approve(launch, amount);
       // setTrxProcessing(true);
       // await approval.wait();
+      console.log(utils.parseEther(purchaseAmount.toString()));
       const contract = new Contract(launch, idoABI, signer);
       const purchaseTxn = await contract.purchaseToken({
-        value: utils.parseEther(purchaseAmount),
+        value: "10000000000",
       });
       await purchaseTxn.wait();
       purchaseTxn.hash && setTrxProcessing(false);
       setPurchaseOpen(false);
     } catch (error) {
+      console.log(error);
       setErrorModal(true);
       error.code == -32000
         ? setErrorMessage("Transaction Overpriced")

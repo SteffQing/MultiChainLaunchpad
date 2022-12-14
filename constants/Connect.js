@@ -125,7 +125,7 @@ export default function Connect() {
         >{`${account.slice(0, 6)}...${account.slice(37, 42)}`}</div>
       ) : (
         <div className={styles.connect} onClick={() => setConnectModal(true)}>
-          Connect
+          Connect Wallet
         </div>
       )}
       {connectModal && (
