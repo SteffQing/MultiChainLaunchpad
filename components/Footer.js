@@ -12,18 +12,6 @@ export default function Footer() {
             Get early mover advantage to Innovative products on the EVM Chain.
             Interoperability at the core of development
           </p>
-          <div className={styles.iconSocial} style={{ display: "flex" }}>
-            <Link href="https://twitter.com/texostarter">
-              <a target="_blank" rel="noopener noreferrer">
-                <BsTwitter />
-              </a>
-            </Link>
-            <Link href="https://t.me/texostarter">
-              <a target="_blank" rel="noopener noreferrer">
-                <BsTelegram />
-              </a>
-            </Link>
-          </div>
         </div>
         <aside>
           <div className={styles.company}>
@@ -78,6 +66,18 @@ export default function Footer() {
       </div>
 
       <div className={styles.footer2}>
+        <div className={styles.iconSocial} style={{ display: "flex" }}>
+          <Link href="https://twitter.com/texostarter">
+            <a target="_blank" rel="noopener noreferrer">
+              <BsTwitter />
+            </a>
+          </Link>
+          <Link href="https://t.me/texostarter">
+            <a target="_blank" rel="noopener noreferrer">
+              <BsTelegram />
+            </a>
+          </Link>
+        </div>
         <p>Copyright &copy; 2022 TexoStarter</p>
       </div>
     </footer>

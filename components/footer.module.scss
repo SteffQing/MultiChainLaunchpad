@@ -1,5 +1,5 @@
 .main {
-  padding: 0 5vw;
+  padding: 0 2vw;
   background-color: #000;
   font-family: "Lato", sans-serif;
   .footer {
@@ -15,6 +15,7 @@
         font-weight: 600;
         font-size: clamp(1.5rem, 2rem, 2vw);
         margin: 0.4rem 0;
+        text-align: center;
       }
       p {
         font-size: clamp(1rem, 1.5rem, 1.5vw);
@@ -22,18 +23,6 @@
         margin: 0.2rem 0;
         letter-spacing: 1px;
         font-family: "Lato", sans-serif;
-      }
-      div {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 1rem;
-        a {
-          transition: all 0.3s ease-in-out;
-          &:hover {
-            transform: scale(1.1);
-          }
-        }
       }
     }
     aside {
@@ -71,9 +60,25 @@
     @media (min-width: 470px) {
       flex-direction: row;
       gap: 2rem;
+      h4 {
+        text-align: left !important;
+      }
     }
   }
   .footer2 {
+    .iconSocial {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      a {
+        transition: all 0.3s ease-in-out;
+        font-size: 1.5rem;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
     p {
       text-align: center;
       margin: 0;
