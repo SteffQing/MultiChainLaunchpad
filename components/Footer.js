@@ -36,7 +36,7 @@ export default function Footer() {
             <h5>Contact</h5>
             <p>
               <a
-                href="https://forms.gle/Xp7BMev8qCko5aMU7"
+                href="https://t.me/serratim"
                 target="_blank"
                 rel="noopener noreferrer"
               >
