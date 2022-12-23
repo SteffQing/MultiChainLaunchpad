@@ -53,7 +53,7 @@ export default function IDOCard({ contract }) {
           </div>
         </div>
       ) : (
-        <div className={styles.error}>Coming Soon</div>
+        <div className={styles.error}>Loading...</div>
       )}
     </>
   );

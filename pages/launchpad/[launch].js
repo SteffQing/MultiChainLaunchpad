@@ -17,7 +17,7 @@ export default function Launch({ ipfs, launch }) {
   const [errorMessage, setErrorMessage] = useState("");
   const [time, setTime] = useState(null);
   const [date, setDate] = useState("");
-  const distDate = new Date(1670989800 * 1000);
+  const distDate = new Date(ipfs.distributionDate * 1000);
   const [progressWidth, setProgressBarWidth] = useState(null);
   async function CalculateProgressBarWidth() {
     const currentTimeInMS = new Date().getTime();
@@ -32,9 +32,9 @@ export default function Launch({ ipfs, launch }) {
     let minute = IDOTime.getUTCMinutes();
     let second = IDOTime.getUTCSeconds();
     setDate(
-      `${Math.abs(hours - hour)}:${Math.abs(minutes - minute)}:${Math.abs(
-        seconds - second
-      )}`
+      `${Math.abs(hours >= hour ? 35 - hours : hours - hour)}:${Math.abs(
+        hours > hour ? minutes - minute : 60 - minutes
+      )}:${Math.abs(hours > hour ? seconds - second : 60 - seconds)}`
     );
     const IDOcontract = new Contract(launch, idoABI, contracts.provider);
     const totalTokenTBSold = ipfs.targetSale;
@@ -60,7 +60,7 @@ export default function Launch({ ipfs, launch }) {
       console.log(utils.parseEther(purchaseAmount.toString()));
       const contract = new Contract(launch, idoABI, signer);
       const purchaseTxn = await contract.purchaseToken({
-        value: "10000000000",
+        value: "100000000000000000",
       });
       await purchaseTxn.wait();
       purchaseTxn.hash && setTrxProcessing(false);
@@ -161,14 +161,14 @@ export default function Launch({ ipfs, launch }) {
                   <div className={styles.inputDiv}>
                     <input
                       className={styles.input}
-                      placeholder="USDT Amount"
+                      placeholder="SAMA Amount"
                       onChange={setAmount}
                     />
                   </div>
                   <button onClick={PurchaseAllocation}>
                     {trxProcess ? "Loading.." : "Purchase"}
                   </button>
-                  <p className={styles.text}>Lorem Ipsum</p>
+                  <p className={styles.text}>Purchases are in SAMA</p>
                 </div>
               </div>
             )}
