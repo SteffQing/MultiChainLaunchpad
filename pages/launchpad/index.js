@@ -6,7 +6,7 @@ import { contracts } from "../../constants/ABIs";
 import Link from "next/link";
 export default function LaunchPad({ data }) {
   // const array = data.IDOcontracts;
-  const array = [""];
+  const array = ["0xdbA49532B1a30d9A2dea1FE2f6D7B12C966F7C24"];
   return (
     <main className={styles.main}>
       <div className={styles.hero}>
