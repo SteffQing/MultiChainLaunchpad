@@ -3,10 +3,11 @@ import styles from "../../styles/Launchpadportal.module.css";
 import Image from "next/image";
 import { useWeb3React } from "@web3-react/core";
 import { idoABI, contracts } from "../../constants/ABIs";
-import { Contract, utils } from "ethers";
+import { Contract, utils, ethers } from "ethers";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 
 export default function Launch({ ipfs, launch }) {
+  console.log(launch)
   const { active, account, library } = useWeb3React();
   const [purchaseAmount, setPurchaseAmount] = useState("");
   const [trxProcess, setTrxProcessing] = useState(false);
@@ -57,10 +58,13 @@ export default function Launch({ ipfs, launch }) {
       // const approval = await token.approve(launch, amount);
       // setTrxProcessing(true);
       // await approval.wait();
-      console.log(utils.parseEther(purchaseAmount.toString()));
+      // console.log(utils.parseEther(purchaseAmount.toString()));
       const contract = new Contract(launch, idoABI, signer);
+      const x = ethers.utils.parseEther("0.0001");
+      var y = x.toNumber()
+      console.log(y)
       const purchaseTxn = await contract.purchaseToken({
-        value: "100000000000000000",
+        value: y,
       });
       await purchaseTxn.wait();
       purchaseTxn.hash && setTrxProcessing(false);
