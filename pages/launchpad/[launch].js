@@ -53,17 +53,13 @@ export default function Launch({ ipfs, launch }) {
   const PurchaseAllocation = async () => {
     try {
       const signer = await library.getSigner();
-      // const token = new Contract(contracts.StableCoin, tokenABI, signer);
-      // const approval = await token.approve(launch, amount);
-      // setTrxProcessing(true);
-      // await approval.wait();
-      console.log(utils.parseEther(purchaseAmount.toString()));
       const contract = new Contract(launch, idoABI, signer);
-      const purchaseTxn = await contract.purchaseToken({
-        value: "100000000000000000",
-      });
-      await purchaseTxn.wait();
-      purchaseTxn.hash && setTrxProcessing(false);
+      const amount = utils.parseEther("1");
+      console.log(amount, utils.parseEther("100"));
+      const options = { value: amount };
+      const txn = await contract.purchaseToken("100000");
+      await txn.wait();
+      txn.hash && setTrxProcessing(false);
       setPurchaseOpen(false);
     } catch (error) {
       console.log(error);
