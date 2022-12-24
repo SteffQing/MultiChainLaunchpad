@@ -42,7 +42,7 @@ export default function Launch({ ipfs, launch }) {
     const tokenSold = utils.formatEther(sold);
     setTotalRaised(tokenSold);
     if (active) {
-      const purchases = await IDOcontract.purchase(account);
+      const purchases = await IDOcontract.userPurchase(account);
       const purchaseValue = utils.formatEther(purchases);
       setUserPurchase(purchaseValue);
     }
@@ -53,29 +53,30 @@ export default function Launch({ ipfs, launch }) {
   const PurchaseAllocation = async () => {
     try {
       const signer = await library.getSigner();
-      // const token = new Contract(contracts.StableCoin, tokenABI, signer);
-      // const approval = await token.approve(launch, amount);
-      // setTrxProcessing(true);
-      // await approval.wait();
-      // console.log(utils.parseEther(purchaseAmount.toString()));
       const contract = new Contract(launch, idoABI, signer);
+      const amount = utils.parseEther(purchaseAmount);
+      console.log("something", amount);
       const purchaseTxn = await contract.purchaseToken({
-        value: "100000000000000000",
+        value: amount,
       });
       await purchaseTxn.wait();
       purchaseTxn.hash && setTrxProcessing(false);
       setPurchaseOpen(false);
     } catch (error) {
-      console.log(error);
+      console.log(error.transaction);
       setErrorModal(true);
       error.code == -32000
         ? setErrorMessage("Transaction Overpriced")
-        : error.code == 4001
+        : error?.data?.code == -32000
+        ? setErrorMessage("Insufficient Funds for transfer")
+        : error?.transaction?.data == "0xa95c4d62"
         ? setErrorMessage("User denied transaction signature")
         : error.code == -32603
         ? setErrorMessage("execution reverted")
         : setErrorMessage("An Unknown error occured");
-      setErrorModal(false);
+      setTimeout(() => {
+        setErrorModal(false);
+      }, 4000);
     }
   };
   const setAmount = (e) => {
@@ -144,7 +145,7 @@ export default function Launch({ ipfs, launch }) {
                 <p>Participants: Limited</p>
                 {time && time < ipfs.IDOdate ? (
                   <p>Presale starts in {date}</p>
-                ) : time - 7200 > ipfs.IDOdate ? (
+                ) : time - 86400 > ipfs.IDOdate ? (
                   <p>Presale has ended</p>
                 ) : (
                   <p>Presale ends in {date}</p>
@@ -153,11 +154,11 @@ export default function Launch({ ipfs, launch }) {
             )}
             {openPurchase && (
               <div className={styles.purchaseModal}>
-                <IoIosCloseCircleOutline
-                  className={styles.closeBtn}
-                  onClick={() => setPurchaseOpen(false)}
-                />
                 <div className={styles.innerModal}>
+                  <IoIosCloseCircleOutline
+                    className={styles.closeBtn}
+                    onClick={() => setPurchaseOpen(false)}
+                  />
                   <div className={styles.inputDiv}>
                     <input
                       className={styles.input}

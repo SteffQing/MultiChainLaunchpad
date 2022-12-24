@@ -1,8 +1,8 @@
 export default async function handler(req, res) {
   const data = {
     name: "Texo Starter",
-    tokenName: "Texo",
-    symbol: "TEXO",
+    tokenName: "Texos",
+    symbol: "TEXOS",
     decimals: 18,
     totalSupply: 1000000,
     description:
