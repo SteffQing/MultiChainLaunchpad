@@ -133,20 +133,7 @@
   top: 0;
   z-index: 2;
   transform-origin: bottom left;
-  -webkit-animation: reveal 1.5s ease-in-out forwards;
-          animation: reveal 1.5s ease-in-out forwards;
-}
-
-@-webkit-keyframes reveal {
-  0% {
-    transform: translateX(0px);
-  }
-  20% {
-    transform: translateX(-60px);
-  }
-  100% {
-    transform: rotate(-20deg);
-  }
+  animation: reveal 1.5s ease-in-out forwards;
 }
 
 @keyframes reveal {
