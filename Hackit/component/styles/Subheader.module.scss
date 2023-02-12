@@ -83,6 +83,10 @@
   .inputFieldsContainer {
     display: flex;
     flex-direction: column;
+    @media (min-width:960px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
     .FormInputfields {
       display: flex;
       flex-direction: column;
