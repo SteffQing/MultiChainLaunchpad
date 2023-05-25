@@ -87,12 +87,6 @@
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 960px) {
-  .formContainer .inputFieldsContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-}
 .formContainer .inputFieldsContainer .FormInputfields {
   display: flex;
   flex-direction: column;
