@@ -23,19 +23,19 @@ export default function Layout({ children }) {
   return (
     <div className={styles.container}>
       <div className="styles.Navbar">
-        {/* <Navbar
+        <Navbar
           cycleOpen={cycleOpen}
           open={open}
           handleClick={handleClick}
           openMM={openMM}
           handleMobileClick={handleMobileClick}
-        /> */}
+        />
         {openMM && (
           <MobileMenu openMM={openMM} handleMobileClick={handleMobileClick} />
         )}
       </div>
       <div className={styles.Schildren}>
-        {/* {isDesktop ? (
+        {isDesktop ? (
           <>
             <motion.div
               className={styles.deskTopSideBar}
@@ -58,11 +58,11 @@ export default function Layout({ children }) {
           <motion.div
             className={styles.children}
             transition={{ duration: 0.7 }}
-          > */}
+          >
             {children}
-            {/* <Footer /> */}
-          {/* </motion.div> */}
-        {/* // )} */}
+            <Footer />
+          </motion.div>
+        )}
       </div>
     </div>
   );
